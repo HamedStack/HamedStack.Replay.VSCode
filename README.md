@@ -2,7 +2,7 @@
 
 # [Replay](https://marketplace.visualstudio.com/items?itemName=hamedfathi.vscode-replay)
 
-Live coding is the best way for teaching and sharing your knowledge with others but as you know this is not easy! The idea behind writing this extension is to have live coding with a hundred percent accuracy and less stressful moments!
+Live coding is the best way to teach and share your knowledge with others but as you know this is not easy! The idea behind writing this extension is to have live coding with a hundred percent accuracy and less stressful moments!
 
 You can achieve the goal in two different ways:
 
@@ -17,14 +17,14 @@ You have full control of the script that you want to type:
 
 * Move the cursor in any direction and number you want.
 * Using predefined utility commands to simplify the typing process.
-* Calling commands available in VS Code e.g Format the document by `editor.action.formatDocument`.
-* Present your code perfectly with manual and automatic pause/resume cycle.
+* Calling commands available in VS Code e.g. Format the document by `editor.action.formatDocument`.
+* Present your code perfectly with manual and automatic pause/resume cycles.
 
 ## Usage
 
 ![usage](https://user-images.githubusercontent.com/8418700/177055779-f487f57d-98a3-463f-adfe-ac110901cf67.png)
 
-For using this extension, first you should create a `.vscreplay` file. Anything in this file will auto-type exactly as you have like all characters, new lines, spaces, and so on but you can change the way of typing with the operational characters and commands that are provided before.
+To use this extension, first, you should create a `.vscreplay` file. Anything in this file will auto-type exactly as you have like all characters, new lines, spaces, and so on but you can change the way of typing with the operational characters and commands that are provided before.
 
 `replay` and `pause` commands just work when you have a `.vscreplay` file in your active editor.
 
@@ -75,7 +75,7 @@ test('adds 1 + 2 to equal 3', () => {⮒⮒});⇥
 // ✓ adds 1 + 2 to equal 3 (5ms)
 ```
 
-The sample file is also accessible from [here](https://github.com/HamedFathi/Replay/blob/main/sample/sample.vscreplay).
+The sample file is also accessible from [here](https://github.com/HamedStack/HamedStack.Replay.VSCode/blob/main/sample/sample.vscreplay).
 
 ### Operational Characters
 
@@ -90,12 +90,12 @@ The sample file is also accessible from [here](https://github.com/HamedFathi/Rep
 | ⇤        | begin         | Move the cursor to the beginning of the line |
 | ⇥        | end           | Move the cursor to the end of the line |
 |⮒         | newline       |  Adding a new line |
-|⨷        |  remove-newline |  removng next new line      |
+|⨷        |  remove-newline |  Removing next new line      |
 |⟿        |  whitespace     |  Adding a whitespace |
 | ⌫       |  backspace      | Delete the character to the left of the cursor |
-|⭯         | pause         | Pause the running process and ask user to continue via dialog |
+|⭯         | pause         | Pause the running process and ask the user to continue via dialog |
 |⧉        |  command        |  Adding some useful functionality to your script     |
-|↯        |  boost        |  Sometimes you want to go to specific part of the content with maximum speed.<br/>All waits and pauses will cancel until this character in your content.<br/>You can use this character just once in whole of your script.     |
+|↯        |  boost        |  Sometimes you want to go to a specific part of the content with maximum speed.<br/>All waits and pauses will cancel until this character in your content.<br/>You can use this character just once in the whole of your script.     |
 |↯↯        |  double-boost        |  It works exactly the same as `boost` but with a pause. It means after reaching the `double boost` you should confirm for resume.|
 
 You can use a number after the below operational characters to write less repetitive code:
@@ -116,25 +116,25 @@ If you set `0` for the count, the extension automatically considers it as `1`.
 
 |  | Name | Description |
 |:---------|------|------|
-| ⧉ goto:1:5 |goto| go to the specified line and column, you can use `eol` for end of line and `ll` for last line e.g `goto:ll:eol`|
-| ⧉ delete:1 |delete-line|delete whole content of the line and line itself, you can use `ll` for last line|
-| ⧉ empty:1 |empty-line|delete whole content of the line but keep the line empty, move the cursor to the beginning of the line, you can use `ll` for last line|
-| ⧉ delete-after:1:5|delete-after| delete characters after the specified line and column, column {N} also deletes, the deletion applies only to the specified line, you can use `eol` for end of line and `ll` for last line |
-| ⧉ delete-before:1:5|delete-before| delete characters before the specified line and column, column {N} also deletes, the deletion applies only to the specified line, you can use `eol` for end of line and `ll` for last line |
-| ⧉ delete-area:1:5:2:9|delete-area| delete characters of the specified positions, you can use `eol` for end of line and `ll` for last line |
-| ⧉ delete-all |delete-all|delete whole content|
-| ⧉ execute:editor.action.formatDocument |execute|execute the specified command of VS Code.|
-| ⧉ duplicate-line-after:1|duplicate-line-after| duplicate the line after it, you can use `ll` for last line |
-| ⧉ duplicate-line-before:1|duplicate-line-before| duplicate the line before it, you can use `ll` for last line |
-| ⧉ selectn:10:1:5:2:14 |selectn| select the specified line and column for seconds, you can use `eol` for end of line and `ll` for last line |
-| ⧉ copy:1:5:2:14 |copy| copy the specified line and column, you can use `eol` for end of line and `ll` for last line |
-| ⧉ cut:3:4:6:eol |cut| cut the specified line and column, you can use `eol` for end of line and `ll` for last line  |
-| ⧉ paste:6:5:7:20 |paste| paste the specified line and column, you can use `eol` for end of line and `ll` for last line  |
-| ⧉ waitn:10 <br/> ⧉ waitn:10:comment |waitn| waiting for {N} seconds with a comment if you set |
+| ⧉ goto:1:5 |goto| Go to the specified line and column, you can use `eol` for end of line and `ll` for last line e.g `goto:ll:eol`|
+| ⧉ delete:1 |delete-line|Delete the whole content of the line and line itself, you can use `ll` for last line|
+| ⧉ empty:1 |empty-line| Delete the whole content of the line but keep the line empty, move the cursor to the beginning of the line, you can use `ll` for last line|
+| ⧉ delete-after:1:5|delete-after| Delete characters after the specified line and column, column {N} also deletes, the deletion applies only to the specified line, you can use `eol` for end of line and `ll` for last line |
+| ⧉ delete-before:1:5|delete-before| Delete characters before the specified line and column, column {N} also deletes, the deletion applies only to the specified line, you can use `eol` for end of line and `ll` for last line |
+| ⧉ delete-area:1:5:2:9|delete-area| Delete characters of the specified positions, you can use `eol` for end of line and `ll` for last line |
+| ⧉ delete-all |delete-all|Delete whole content|
+| ⧉ execute:editor.action.formatDocument |execute|Execute the specified command of VS Code.|
+| ⧉ duplicate-line-after:1|duplicate-line-after| Duplicate the line after it, you can use `ll` for last line |
+| ⧉ duplicate-line-before:1|duplicate-line-before| Duplicate the line before it, you can use `ll` for last line |
+| ⧉ selectn:10:1:5:2:14 |selectn| Select the specified line and column for seconds, you can use `eol` for end of line and `ll` for last line |
+| ⧉ copy:1:5:2:14 |copy| Copy the specified line and column, you can use `eol` for end of line and `ll` for last line |
+| ⧉ cut:3:4:6:eol |cut| Cut the specified line and column, you can use `eol` for end of line and `ll` for last line  |
+| ⧉ paste:6:5:7:20 |paste| Paste the specified line and column, you can use `eol` for end of line and `ll` for last line  |
+| ⧉ waitn:10 <br/> ⧉ waitn:10:comment |waitn| Waiting for {N} seconds with a comment if you set |
 | ⧉ wait <br/> ⧉ wait:comment |wait| Showing a Yes/No dialog with a comment if you set |
 | ⧉ speed <br/> ⧉ speed:speed:delay |speed| Control the speed and delay of typing|
-| ⧉ memory:clip1:1:4:6:10|save| save the content of the specified area in memory with the variable name of `clip1`, variable name should start with a letter and contains letters & numbers, you can use `eol` for end of line and `ll` for last line |
-| ⧉ restore:clip1:0:7:3:22|restore| restore the content of `clip1` variable in the specified area, variable name should start with a letter and contains letters & numbers, you can use `eol` for end of line and `ll` for last line |
+| ⧉ memory:clip1:1:4:6:10|save| Save the content of the specified area in memory with the variable name of `clip1`, variable name should start with a letter and contains letters & numbers, you can use `eol` for end of line and `ll` for last line |
+| ⧉ restore:clip1:0:7:3:22|restore| Restore the content of `clip1` variable in the specified area, variable name should start with a letter and contains letters & numbers, you can use `eol` for end of line and `ll` for last line |
 
 ### Settings
 
@@ -171,7 +171,7 @@ info: true
 |save | Yes      | true    | `Save` the final result automatically if it is true         |
 |info | Yes      | true    | Show all `info` dialogs about pause times if it is true |
 
-You should use the `relative` path for the `file` and `next` settings. The root for the starting point is your VS Code workspace folder.
+You should use the `relative` path for the `file` and `next` settings. The root of the starting point is your VS Code workspace folder.
 ### Snippets
 
 ![snippets](https://user-images.githubusercontent.com/8418700/177030529-5a717407-166e-4916-988c-f5b1b6dc3e50.png)
@@ -227,7 +227,7 @@ Copy and paste the characters from this tutorial is not a good way! To work easi
 
 ## Shortcuts
 
-For manual control on auto typing you can use the following shortcuts:
+For manual control on auto typing, you can use the following shortcuts:
 
 | Action | Window/Linux   | Mac           |
 |:-------|:--------------:|:-------------:|    
